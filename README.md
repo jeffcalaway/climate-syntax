@@ -10,9 +10,11 @@ With the terminal open, key the following:
 apm install atom-alphabet-syntax
 ```
 
-# Currently Supported Languages
-* CSS / SCSS
+# Languages
+### Currently Supported
+* CSS/SCSS
 * Javascript
-* HTML / PHP
+* HTML
+* PHP
 
 ![screenshot](screenshot-here.png)
