@@ -2,10 +2,13 @@
   "name": "atom-alphabet",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "description": "A colorful syntax theme based on Google's style guide",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "google",
+    "alphabet",
+    "material"
   ],
   "repository": "https://github.com/atom/atom-alphabet",
   "license": "MIT",

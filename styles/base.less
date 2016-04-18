@@ -1,54 +1,90 @@
 @import "syntax-variables";
 
+//░░░░░░░░░░░░░░░░░░░░░░░░
+//
+//     DIRECTORY
+//
+//     _Editor
+//     _Guides
+//     _Comments
+//     _Languages
+//
+//░░░░░░░░░░░░░░░░░░░░░░░░
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Editor
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
 atom-text-editor, :host {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
+    background-color: @syntax-background-color;
+    color: @syntax-text-color;
+    // padding-top:15px;
+}
 
-  .wrap-guide {
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Guides
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.wrap-guide {
     background-color: @syntax-wrap-guide-color;
-  }
+}
 
-  .indent-guide {
+.indent-guide {
     color: @syntax-indent-guide-color;
-  }
+}
 
-  .invisible-character {
+.invisible-character {
     color: @syntax-invisible-character-color;
-  }
+}
 
-  .gutter {
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Gutter
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.gutter-container{
+    width:65px;
+}
+
+.gutter {
     background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
 
-    .line-number {
-      &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
-      }
-
-      &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
-      }
+    &[gutter-name="line-number"]{
+        border-right:1px solid #2F3C4F;
     }
-  }
 
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
+    .line-number {
+
+        &.cursor-line {
+            background-color: @syntax-gutter-background-color-selected;
+            color: @syntax-gutter-text-color-selected;
+            box-shadow:inset 3px 0 0 0 @blue;
+        }
+
+        &.cursor-line-no-selection {
+            color: @syntax-gutter-text-color-selected;
+        }
+    }
+}
+
+.gutter .line-number.folded,
+.gutter .line-number:after,
+.fold-marker:after {
     color: @light-gray;
-  }
+}
 
-  .invisible {
+.invisible {
     color: @syntax-text-color;
-  }
+}
 
-  .cursor {
+.cursor {
     color: @syntax-cursor-color;
-  }
+}
 
-  .selection .region {
+.selection .region {
     background-color: @syntax-selection-color;
-  }
 }
 
 atom-text-editor .search-results .marker .region,
@@ -62,8 +98,12 @@ atom-text-editor .search-results .marker.current-result .region,
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Comments
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
 .comment {
-  color: @light-gray;
+  color: @gray !important;
 }
 
 .keyword {
@@ -81,9 +121,9 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @blue;
   }
 
-  &.other.unit {
-    color: @orange;
-  }
+  // &.other.unit {
+  //   color: @orange;
+  // }
 }
 
 .storage {
@@ -147,19 +187,19 @@ atom-text-editor .search-results .marker.current-result .region,
 .punctuation {
   &.definition {
     &.comment {
-      color: @light-gray;
+    //   color: @light-gray;
     }
 
     &.string,
     &.variable,
     &.parameters,
     &.array {
-      color: @syntax-text-color;
+    //   color: @syntax-text-color;
     }
 
     &.heading,
     &.identity {
-      color: @blue;
+    //   color: @blue;
     }
 
     &.bold {
@@ -181,7 +221,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .support {
   &.class {
-    color: @light-orange;
+    // color: @light-orange;
   }
 
   &.function  {
@@ -197,16 +237,9 @@ atom-text-editor .search-results .marker.current-result .region,
   &.name.function {
     color: @blue;
   }
-  &.name.type {
-    color: @light-orange;
-    text-decoration: underline;
-  }
 
   &.other.inherited-class {
     color: @green;
-  }
-  &.name.class, &.name.type.class {
-    color: @light-orange;
   }
 
   &.name.section {
@@ -215,11 +248,9 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.name.tag {
     color: @red;
-    text-decoration: underline;
   }
 
   &.other.attribute-name {
-    color: @orange;
 
     &.id {
       color: @blue;
@@ -305,3 +336,13 @@ atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
   padding-left: 1px;
 }
+
+.terminator{
+    color:@syntax-semicolon-color !important;
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Languages
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+@import "css";

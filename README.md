@@ -11,7 +11,7 @@ apm install atom-alphabet-syntax
 ```
 
 # Languages
-### Currently Supported
+### Currently Supported:
 * CSS/SCSS
 * Javascript
 * HTML
