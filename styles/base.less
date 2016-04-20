@@ -7,6 +7,7 @@
 //     _Editor
 //     _Guides
 //     _Comments
+//     _Invisibles
 //     _Gutter
 //
 //░░░░░░░░░░░░░░░░░░░░░░░░
@@ -36,6 +37,15 @@ atom-text-editor, :host {
 
 .invisible-character {
     color: @syntax-invisible-character-color;
+}
+
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Invisibles
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.invisible-character, .indent-guide{
+    color:lighten(@base,8%);
 }
 
 
