@@ -24,7 +24,7 @@
 //     _BuiltIn
 //     _Color
 //     _Interpolation
-//     _IfElseEach
+//     _IfElseEachFor
 //     _Placeholder
 //     _Function
 //     _MediaQuery
@@ -304,10 +304,10 @@ span.meta.set.variable.scss, .variable{
 
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-// _IfElseEach
+// _IfElseEachFor
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.if .if, .each .each, .else .else{
+.if .if, .each .each, .else .else,.for .for,.return .return,.while .while{
     &,*{
         color:@pink;
     }
@@ -326,6 +326,38 @@ span.meta.set.variable.scss, .variable{
 
     .variable +.constant{
         color:@white;
+    }
+}
+
+.at-rule{
+    &.for,&.return{
+        .for,.return,.while{
+            color:@pink !important;
+        }
+
+        .numeric{
+            color:@pink;
+        }
+
+        .operator,.support.function{
+            color:@light-pink !important;
+        }
+    }
+
+    &.while{
+        > .while.control,> .numeric{
+            color:@pink;
+        }
+    }
+
+    &.warn{
+        color:@teal;
+    }
+}
+
+.warn .warn{
+    &,*{
+        color:@teal;
     }
 }
 
