@@ -1,13 +1,14 @@
 {
-  "name": "atom-alphabet",
+  "name": "climate-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A colorful syntax theme based on Google's style guide",
+  "description": "A colorful syntax theme for design-finicky developers",
   "keywords": [
     "syntax",
     "theme",
     "google",
-    "alphabet",
+    "climate",
+    "design",
     "material"
   ],
   "repository": "https://github.com/atom/atom-alphabet",
