@@ -9,6 +9,7 @@
 //     _Comments
 //     _Invisibles
 //     _Gutter
+//     _FindResults
 //
 //░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -94,7 +95,7 @@ atom-text-editor, :host {
 }
 
 .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: fade(@light-blue,20);
 }
 
 atom-text-editor .search-results .marker .region,
@@ -349,6 +350,32 @@ atom-text-editor[mini] .scroll-view,
 
 .terminator{
     color:@syntax-semicolon-color !important;
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _FindResults
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+atom-text-editor,atom-text-editor::shadow{
+    .highlight-selected{
+        .region{
+            border:1px solid @blue !important;
+            box-shadow:3px 4px 0 0 @dark-base;
+            // border-color:@blue !important;
+        }
+    }
+    .find-result .region{
+        border:1px solid @teal !important;
+        box-shadow:3px 4px 0 0 @dark-base;
+    }
+
+    .current-result .region{
+        border:2px solid @teal !important;
+        box-shadow:4px 5px 0 0 @dark-base;
+    }
+}
+
+atom-text-editor .find-result .region, atom-text-editor::shadow .find-result .region{
 }
 
 @import "css";
