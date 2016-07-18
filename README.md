@@ -10,7 +10,7 @@
 ![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/screenshot-php.png)
 
 # Installation
----
+-
 With the terminal open, punch in the following:
 
 ```shell
