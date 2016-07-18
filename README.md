@@ -3,6 +3,17 @@
 
 **Climate Syntax** is a soft-colored syntax theme for [Climate UI](https://github.com/jmcalaway/climate-ui) fastidiously designed to make code both attractive and comprehensive.
 
+# Samples
+---
+### SCSS
+![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/screenshot-sass.png)
+
+### jQuery
+![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/screenshot-javascript.png)
+
+### PHP
+![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/screenshot-php.png)
+
 # Installation
 ---
 With the terminal open, punch in the following:
