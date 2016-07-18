@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/climate-header.png)
 ---
 
-![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/theme-screenshot.png)
+![](https://raw.githubusercontent.com/jmcalaway/climate-syntax/master/theme-screenshot-new.png)
 
 **Climate Syntax** is a soft-colored syntax theme for [Climate UI](https://github.com/jmcalaway/climate-ui) fastidiously designed to make code both attractive and comprehensive.
 
