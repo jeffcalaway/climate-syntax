@@ -1,7 +1,7 @@
 {
   "name": "climate-syntax",
   "theme": "syntax",
-  "version": "5.0.0",
+  "version": "1.0.0",
   "description": "A colorful syntax theme for design-finicky developers",
   "keywords": [
     "syntax",
@@ -14,6 +14,6 @@
   "repository": "https://github.com/jmcalaway/climate-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.0.0"
   }
 }
