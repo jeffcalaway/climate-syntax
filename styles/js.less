@@ -11,13 +11,13 @@
 //     _Function
 //     _Keyword
 //     _ConstantDom
-//     _Numeric
+//     _.syntax--numeric
 //     _Support
 //     _Operator
 //
 //░░░░░░░░░░░░░░░░░░░░░░░░
 
-.source.js{
+.syntax--source.syntax--js{
     color:@white;
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -28,18 +28,18 @@
 // ∟jsCall
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.line[data-screen-row="0"]{
-    &,.type{
+.syntax--line[data-screen-row="0"]{
+    &,.syntax--type{
         color:@white;
     }
 
-    .function-call,.method-call{
-        > .function,.variable{
+    .syntax--function-call,.syntax--method-call{
+        > .syntax--function,.syntax--variable{
             color:@green;
         }
     }
 
-    .class{
+    .syntax--class{
         color:@pink;
     }
 }
@@ -49,18 +49,18 @@
 // _Selector
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.function-call{
+.syntax--function-call{
     &,
-    .string.begin,
-    .string.end{
+    .syntax--string.syntax--begin,
+    .syntax--string.syntax--end{
         color:@white !important;
     }
 
-    .string{
+    .syntax--string{
         color:@blue !important;
     }
 
-    .entity.name{
+    .syntax--entity.syntax--name{
         color:@purple;
     }
 }
@@ -70,15 +70,15 @@
 // _Variable
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.var,.variable.object,.variable.parameter.function,.variable{
+.syntax--var,.syntax--variable.syntax--object,.syntax--variable.syntax--parameter.syntax--function,.syntax--variable{
     color:@purple;
 }
 
-.arguments{
+.syntax--arguments{
     color:@white;
 }
 
-.variable.language{
+.syntax--variable.syntax--language{
     color:@pink;
 }
 
@@ -87,18 +87,18 @@
 // _Method
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.method-call{
-    .period,.period + .name.function{
+.syntax--method-call{
+    .syntax--period,.syntax--period + .syntax--name.syntax--function{
         color:@green;
     }
 
-    .period{
-        + .dom,+ .support{
+    .syntax--period{
+        + .syntax--dom,+ .syntax--support{
             color:@green !important;
         }
     }
 
-    .string,.string *{
+    .syntax--string,.syntax--string *{
         color:@teal;
     }
 }
@@ -108,7 +108,7 @@
 // _Type
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.type.function{
+.syntax--type.syntax--function{
     color:@white;
 }
 
@@ -117,7 +117,7 @@
 // _Function
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.support.function{
+.syntax--support.syntax--function{
     color:@teal !important;
 }
 
@@ -126,7 +126,7 @@
 // _Keyword
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.keyword.control{
+.syntax--keyword.syntax--control{
     color:@teal;
 }
 
@@ -135,20 +135,20 @@
 // _ConstantDom
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.constant,.dom{
+.syntax--constant,.syntax--dom{
     color:@green !important;
 }
 
-.function-call + .delimiter.period + .dom{
+.syntax--function-call + .syntax--delimiter.syntax--period + .syntax--dom{
     color:@green !important;
 }
 
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-// _Numeric
+// _.syntax--numeric
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.numeric,.unit{
+.syntax--numeric,.syntax--unit{
     color:@teal-blue !important;
 }
 
@@ -157,7 +157,7 @@
 // _Support
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.arguments .support{
+.syntax--arguments .syntax--support{
     color:@pink;
 }
 
@@ -166,7 +166,7 @@
 // _Operator
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.keyword.operator{
+.syntax--keyword.syntax--operator{
     color:@white;
 }
 

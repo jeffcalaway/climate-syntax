@@ -33,7 +33,7 @@
 //
 //░░░░░░░░░░░░░░░░░░░░░░░░
 
-.source.css, .source.scss, .source.less{
+.syntax--source.syntax--css, .syntax--source.syntax--scss, .syntax--source.syntax--less {
     color:@white;
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -44,7 +44,7 @@
 // ∟Punctuation
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.punctuation{
+.syntax--punctuation {
     color:@white;
 }
 
@@ -52,8 +52,8 @@
 // ∟Operator
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.keyword.operator{
-    &,.control{
+.syntax--keyword.syntax--operator {
+    &,.syntax--control {
         color:@yellow !important;
     }
 }
@@ -62,17 +62,17 @@
 // ∟ParentSelector
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.parent-selector *,.entity.name.tag{
+.syntax--parent-selector *,.syntax--entity.syntax--name.syntax--tag {
     color:@red;
 }
 
-.entity.name.tag + .meta{
-    &,.separator{
+.syntax--entity.syntax--name.syntax--tag + .syntax--meta {
+    &,.syntax--separator {
         color:@white;
     }
 }
 
-.parent-selector-suffix{
+.syntax--parent-selector-suffix {
     color:@yellow;
 }
 
@@ -80,7 +80,7 @@
 // ∟Important
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.keyword.important{
+.syntax--keyword.syntax--important {
     color:@red;
 }
 
@@ -88,11 +88,11 @@
 // ∟Brace
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.property-list .brace{
+.syntax--property-list .syntax--brace {
     color:@yellow;
 }
 
-.property-value .brace{
+.syntax--property-value .syntax--brace {
     color:@light-blue;
 }
 
@@ -101,23 +101,23 @@
 // _Variable
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-span.meta.set.variable.scss, .variable{
-    &,.variable,+ .separator{
+span.syntax--meta.syntax--set.syntax--variable.syntax--scss, .syntax--variable {
+    &,.syntax--variable,+ .syntax--separator {
         color:@blue;
     }
 
-    > .key-value{
+    > .syntax--key-value {
         & + span,& + span *{
             color:@white;
         }
     }
 }
 
-.set.variable > .support{
+.syntax--set.syntax--variable > .syntax--support {
     color:@teal;
 }
 
-.set.variable > .rgb-value{
+.syntax--set.syntax--variable > .syntax--rgb-value {
     color:@white;
 }
 
@@ -126,7 +126,7 @@ span.meta.set.variable.scss, .variable{
 // _Keyword
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.keyword.control{
+.syntax--keyword.syntax--control {
     color:@red;
 }
 
@@ -139,7 +139,7 @@ span.meta.set.variable.scss, .variable{
 // ∟Name
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.property-name{
+.syntax--property-name {
     color:@white;
 }
 
@@ -147,8 +147,8 @@ span.meta.set.variable.scss, .variable{
 // ∟Value
 //░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-.property-value{
-    &,.numeric,.unit,.function,.color,.color *{
+.syntax--property-value {
+    &,.syntax--numeric,.syntax--unit,.syntax--function,.syntax--color,.syntax--color *{
         color:@light-blue;
     }
 }
@@ -158,7 +158,7 @@ span.meta.set.variable.scss, .variable{
 // _Selector
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.class,.id{
+.syntax--class,.syntax--id {
     &,*{
         color:@yellow;
     }
@@ -169,14 +169,14 @@ span.meta.set.variable.scss, .variable{
 // _Pseudo
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.pseudo-element,.pseudo-class,.brace{
+.syntax--pseudo-element,.syntax--pseudo-class,.syntax--brace {
     &,*{
         color:@yellow;
     }
 }
 
-.pseudo-class + .brace{
-    + .class,+ .class *{
+.syntax--pseudo-class + .syntax--brace {
+    + .syntax--class,+ .syntax--class *{
         color:lighten(@yellow,20%) !important;
     }
 }
@@ -186,12 +186,12 @@ span.meta.set.variable.scss, .variable{
 // _Attribute
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.attribute-selector{
-    &,*,.string.punctuation{
+.syntax--attribute-selector {
+    &,*,.syntax--string.syntax--punctuation {
         color:@yellow;
     }
 
-    .string{
+    .syntax--string {
         color:lighten(@yellow,20%);
     }
 }
@@ -201,7 +201,7 @@ span.meta.set.variable.scss, .variable{
 // _String
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.string{
+.syntax--string {
     &,*{
         color:@teal;
     }
@@ -212,12 +212,12 @@ span.meta.set.variable.scss, .variable{
 // _Mixin
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.at-rule.mixin{
+.syntax--at-rule.syntax--mixin {
     &,*{
         color:@pink;
     }
 
-    .variable{
+    .syntax--variable {
         color:@blue;
     }
 }
@@ -227,22 +227,22 @@ span.meta.set.variable.scss, .variable{
 // _Include
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.at-rule.include{
+.syntax--at-rule.syntax--include {
     color:@pink;
 
-    .parameter,.property-value,.punctuation:not(.section),.section,.numeric,.keyword,.string,.punctuation + .rgb-value{
+    .syntax--parameter,.syntax--property-value,.syntax--punctuation:not(.syntax--section),.syntax--section,.syntax--numeric,.syntax--keyword,.syntax--string,.syntax--punctuation + .syntax--rgb-value {
         color:@light-pink;
     }
 
-    .include,.include *,.include + .property-value,.function,.function + .section,.function.section + .section,.url + .section{
+    .syntax--include,.syntax--include *,.syntax--include + .syntax--property-value,.syntax--function,.syntax--function + .syntax--section,.syntax--function.syntax--section + .syntax--section,.syntax--url + .syntax--section {
         color:@pink !important;
     }
 
-    .parameter + .section,.section + .function,.section + .function + .section{
+    .syntax--parameter + .syntax--section,.syntax--section + .syntax--function,.syntax--section + .syntax--function + .syntax--section {
         color:@light-pink !important;
     }
 
-    .punctuation:last-child{
+    .syntax--punctuation:last-child {
         color:@pink !important;
     }
 }
@@ -252,8 +252,8 @@ span.meta.set.variable.scss, .variable{
 // _Extend
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.import{
-    &,*:not(.indent-guide):not(.invisible-character){
+.syntax--import {
+    &,*:not(.syntax--indent-guide):not(.syntax--invisible-character){
         color:@pink !important;
     }
 }
@@ -263,7 +263,7 @@ span.meta.set.variable.scss, .variable{
 // _Invalid
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.invalid.illegal{
+.syntax--invalid.syntax--illegal {
     color:inherit;
     background-color:transparent !important;
     border-bottom:1px dotted @red;
@@ -274,14 +274,14 @@ span.meta.set.variable.scss, .variable{
 // _BuiltIn
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.builtin{
-    &,+ .brace{
+.syntax--builtin {
+    &,+ .syntax--brace {
         color:@light-blue;
     }
 
-    &,+ .brace,+ .brace + *{
-        + .punctuation{
-            &, & + *, & + * + *, & + * + * + .brace{
+    &,+ .syntax--brace,+ .syntax--brace + *{
+        + .syntax--punctuation {
+            &, & + *, & + * + *, & + * + * + .syntax--brace {
                 color:@light-blue !important;
             }
         }
@@ -293,7 +293,7 @@ span.meta.set.variable.scss, .variable{
 // _Color
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.w3c-standard-color-name{
+.syntax--w3c-standard-color-name {
     color:@light-blue;
 }
 
@@ -302,7 +302,7 @@ span.meta.set.variable.scss, .variable{
 // _Interpolation
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.interpolation{
+.syntax--interpolation {
     color:@teal !important;
 }
 
@@ -311,55 +311,55 @@ span.meta.set.variable.scss, .variable{
 // _IfElseEachFor
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.if .if, .each .each, .else .else,.for .for,.return .return,.while .while{
+.syntax--if .syntax--if, .syntax--each .syntax--each, .syntax--else .syntax--else,.syntax--for .syntax--for,.syntax--return .syntax--return,.syntax--while .syntax--while {
     &,*{
         color:@pink;
     }
 }
 
-.each,.if,.else{
-    .operator{
+.syntax--each,.syntax--if,.syntax--else {
+    .syntax--operator {
         color: @pink !important;
     }
 
-    .mathematical-symbols{
-        &, & + .constant{
+    .syntax--mathematical-symbols {
+        &, & + .syntax--constant {
             color:@white;
         }
     }
 
-    .variable +.constant{
+    .syntax--variable +.syntax--constant {
         color:@white;
     }
 }
 
-.at-rule{
-    &.for,&.return{
-        .for,.return,.while{
+.syntax--at-rule {
+    &.syntax--for,&.syntax--return {
+        .syntax--for,.syntax--return,.syntax--while {
             color:@pink !important;
         }
 
-        .numeric{
+        .syntax--numeric {
             color:@pink;
         }
 
-        .operator,.support.function{
+        .syntax--operator,.syntax--support.syntax--function {
             color:@light-pink !important;
         }
     }
 
-    &.while{
-        > .while.control,> .numeric{
+    &.syntax--while {
+        > .syntax--while.syntax--control,> .syntax--numeric {
             color:@pink;
         }
     }
 
-    &.warn{
+    &.syntax--warn {
         color:@teal;
     }
 }
 
-.warn .warn{
+.syntax--warn .syntax--warn {
     &,*{
         color:@teal;
     }
@@ -370,7 +370,7 @@ span.meta.set.variable.scss, .variable{
 // _Placeholder
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.tag.custom{
+.syntax--tag.syntax--custom {
     color:@white !important;
 }
 
@@ -379,12 +379,12 @@ span.meta.set.variable.scss, .variable{
 // _Function
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.at-rule.function{
+.syntax--at-rule.syntax--function {
     &,*{
         color:@pink;
     }
 
-    .variable{
+    .syntax--variable {
         color:@blue;
     }
 }
@@ -394,12 +394,12 @@ span.meta.set.variable.scss, .variable{
 // _MediaQuery
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.at-rule.media{
-    &,.punctuation,.support{
+.syntax--at-rule.syntax--media {
+    &,.syntax--punctuation,.syntax--support {
         color:@pink;
     }
 
-    .property-name.media,.numeric,.unit{
+    .syntax--property-name.syntax--media,.syntax--numeric,.syntax--unit {
         color:@light-pink;
     }
 }
@@ -409,7 +409,7 @@ span.meta.set.variable.scss, .variable{
 // _Keyframes
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.at-rule.keyframes{
+.syntax--at-rule.syntax--keyframes {
     color:@white;
 }
 
@@ -418,7 +418,7 @@ span.meta.set.variable.scss, .variable{
 // _Content
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.scss.content{
+.syntax--scss.syntax--content {
     color:@teal;
 }
 
