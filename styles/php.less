@@ -16,14 +16,14 @@
 //
 //░░░░░░░░░░░░░░░░░░░░░░░░
 
-.source.php, .html.php, .source.html, .html{
+.syntax--source.syntax--php, .syntax--html.syntax--php, .syntax--source.syntax--html, .syntax--html{
     color:@white;
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 // _Base
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.section.embedded, .embedded .end *,.embedded .embedded,.punctuation.section.embedded.begin.php,.punctuation.section.embedded.end.php{
+.syntax--section.syntax--embedded, .syntax--embedded .syntax--end *,.syntax--embedded .syntax--embedded,.syntax--punctuation.syntax--section.syntax--embedded.syntax--begin.syntax--php,.syntax--punctuation.syntax--section.syntax--embedded.syntax--end.syntax--php{
     color:@red !important;
 }
 
@@ -32,7 +32,7 @@
 // _Variable
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.variable{
+.syntax--variable{
     color:@blue;
 }
 
@@ -41,10 +41,10 @@
 // _String
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.string{
+.syntax--string{
     color:@teal;
 
-    .punctuation.begin,.punctuation.end{
+    .syntax--punctuation.syntax--begin,.syntax--punctuation.syntax--end{
         color:@white !important;
     }
 }
@@ -54,7 +54,7 @@
 // _Entity
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.entity.name.tag{
+.syntax--entity.syntax--name.syntax--tag{
     color:@light-red;
 }
 
@@ -63,7 +63,7 @@
 // _ID
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.entity.other.attribute-name.id{
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id{
     color:@yellow;
 }
 
@@ -72,7 +72,7 @@
 // _Attribute
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.attribute-name{
+.syntax--attribute-name{
     color:@yellow;
 }
 
@@ -81,7 +81,7 @@
 // _Support
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.support.function{
+.syntax--support.syntax--function{
     color:@light-blue;
 }
 
@@ -90,7 +90,7 @@
 // _Control
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.keyword.control{
+.syntax--keyword.syntax--control{
     color:@white;
 }
 
@@ -99,7 +99,7 @@
 // _Storage
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.storage{
+.syntax--storage{
     color:@light-red;
 }
 
@@ -108,7 +108,7 @@
 // _Operator
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.keyword.operator{
+.syntax--keyword.syntax--operator{
     color:@white;
 }
 
@@ -117,7 +117,7 @@
 // _Constant
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.constant{
+.syntax--constant{
     color:@white;
 }
 
