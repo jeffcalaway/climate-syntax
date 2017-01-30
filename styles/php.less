@@ -123,3 +123,20 @@
 
 
 }
+
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Regex
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+atom-text-editor::shadow .source .regexp {
+    color: #FF8517 !important;
+}
+
+atom-text-editor::shadow .source.html .string.regexp, atom-text-editor::shadow .source.php .string.regexp, atom-text-editor::shadow .source.html.php .string.regexp {
+    .begin,
+    .end{
+        color: #FF8517 !important;
+        opacity:0.5;
+    }
+}
